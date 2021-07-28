@@ -7,8 +7,3 @@ run-dist: # запуск исполняемого файла
 check-updates: # проверка обновления зависимостей и плагинов из 1го шага
 	./gradlew dependencyUpdates
 
-lint: # проверка стиля кода
-	./gradlew checkstyleMain
-
-build: # сборка проекта
-	./gradlew clean build
