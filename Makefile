@@ -10,5 +10,6 @@ check-updates:	# проверка обновления зависимостей 
 lint:	# проверка стиля кода
 	./gradlew checkstyleMain
 
-buildp:	# сборка проекта
+.PHONY: build
+build:	# сборка проекта
 	./gradlew clean build
