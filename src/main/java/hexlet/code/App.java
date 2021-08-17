@@ -6,7 +6,7 @@ public class App {
 
     public static void main(String[] args) {
         System.out.println(
-                "Please enter the game number and press Enter.\n1 - Greet\n2- Greet\n0 - Exit\nYour choice:");
+                "Please enter the game number and press Enter.\n1 - Greet\n2 - Even\n0 - Exit\nYour choice:");
         Cli cli = new Cli();
         Even even = new Even();
         Scanner scanner = new Scanner(System.in);
