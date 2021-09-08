@@ -9,12 +9,12 @@ import java.util.Scanner;
 public final class Even implements Engine {
 
     private String answer = "";
+    private Cli cli = new Cli();
     public void game() {
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
 
         for (int i = 0; i < NUMBER_OF_LOOPS; i++) {
             Random ran = new Random();
-
             int numberOnConsole = ran.nextInt(NUMBER_LIMITATION);
             System.out.println("Question: " + numberOnConsole);
             System.out.println("Your answer:");
@@ -28,7 +28,7 @@ public final class Even implements Engine {
                     return;
             }
         }
-        System.out.println("Congratulations, " + Cli.yourName + "!");
+        System.out.println("Congratulations, " + cli.getYouName() + "!");
     }
 
     public void wrong() {
@@ -39,6 +39,6 @@ public final class Even implements Engine {
             correctAnswer = "yes";
         }
         System.out.print("'" + answer + "'" + " is wrong answer ;(. Correct answer was '" + correctAnswer
-                + "'.\nLet's try again, " + Cli.yourName + "!\n");
+                + "'.\nLet's try again, " + cli.getYouName() + "!\n");
     }
 }

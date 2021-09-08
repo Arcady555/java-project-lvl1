@@ -1,6 +1,10 @@
 package hexlet.code;
 
-import hexlet.code.Games.*;
+import hexlet.code.Games.Calc;
+import hexlet.code.Games.Even;
+import hexlet.code.Games.GCD;
+import hexlet.code.Games.Prime;
+import hexlet.code.Games.Progression;
 
 import java.util.Scanner;
 
@@ -16,35 +20,35 @@ public class App {
         Progression progression = new Progression();
         Prime prime = new Prime();
         Scanner scanner = new Scanner(System.in);
-        int number = scanner.nextInt();
-        if (number == 0) {
+        String number = scanner.nextLine();
+        if (number == "0") {
             return;
         }
         Cli.greeting();
         switch (number) {
-            case(1): {
+            case "1":
                 break;
-            }
-            case (2): {
+
+            case "2":
                 even.game();
                 break;
-            }
-            case (3): {
+
+            case "3":
                 calc.game();
                 break;
-            }
-            case (4): {
+
+            case "4":
                 gcd.game();
                 break;
-            }
-            case (5): {
+
+            case "5":
                 progression.game();
                 break;
-            }
-            case (6): {
+
+            case "6":
                 prime.game();
                 break;
-            }
+
             default: {
                 System.out.println("wrong number :((");
             }

@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 public final class Prime implements Engine {
     private String answer = "";
+    private Cli cli = new Cli();
     public void game() {
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         for (int i = 0; i < NUMBER_OF_LOOPS; i++) {
@@ -25,7 +26,7 @@ public final class Prime implements Engine {
                 return;
             }
         }
-        System.out.println("Congratulations, " + Cli.yourName + "!");
+        System.out.println("Congratulations, " + cli.getYouName() + "!");
     }
 
     public void wrong() {
@@ -36,7 +37,7 @@ public final class Prime implements Engine {
             correctAnswer = "yes";
         }
         System.out.print("'" + answer + "'" + " is wrong answer ;(. Correct answer was '" + correctAnswer
-                + "'.\nLet's try again, " + Cli.yourName + "!\n");
+                + "'.\nLet's try again, " + cli.getYouName() + "!\n");
     }
 
     private boolean isPrime(int a) {

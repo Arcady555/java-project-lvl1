@@ -10,6 +10,7 @@ public final class Calc implements Engine {
 
     private int answer = 0;
     private int result = 0;
+    private Cli cli = new Cli();
     public void game() {
         System.out.println("What is the result of the expression?");
         char[] operands = {'-', '+', '*'};
@@ -30,12 +31,12 @@ public final class Calc implements Engine {
                 return;
             }
         }
-        System.out.println("Congratulations, " + Cli.yourName + "!");
+        System.out.println("Congratulations, " + cli.getYouName() + "!");
     }
 
     public void wrong() {
         System.out.print("'" + answer + "'" + " is wrong answer ;(. Correct answer was '" + result
-                + "'.\nLet's try again, " + Cli.yourName + "!\n");
+                + "'.\nLet's try again, " + cli.getYouName() + "!\n");
     }
 
     private char chooseOp() {

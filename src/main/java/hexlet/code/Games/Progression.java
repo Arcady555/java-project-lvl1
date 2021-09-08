@@ -12,8 +12,10 @@ public final class Progression implements Engine {
     private int index = 0;
     private int result = 0;
     private int[] array;
+    private Cli cli = new Cli();
 
     public void game() {
+        final int delta = 5;
         final int sizeLimit = 30;
         final int progreLimit = 10;
         System.out.println("What number is missing in the progression?");
@@ -21,7 +23,7 @@ public final class Progression implements Engine {
             Random ran = new Random();
             int startOfProgre = ran.nextInt(NUMBER_LIMITATION);
             int stepOfProgre = ran.nextInt(sizeLimit) + 1;
-            int numOfMemProgre = ran.nextInt(progreLimit) + 5;
+            int numOfMemProgre = ran.nextInt(progreLimit) + delta;
             System.out.print("Question: ");
             takeResult(startOfProgre, stepOfProgre, numOfMemProgre);
             System.out.println("\nYour answer:");
@@ -35,12 +37,12 @@ public final class Progression implements Engine {
                 return;
             }
         }
-        System.out.println("Congratulations, " + Cli.yourName + "!");
+        System.out.println("Congratulations, " + cli.getYouName() + "!");
     }
 
     public void wrong() {
         System.out.print("'" + answer + "'" + " is wrong answer ;(. Correct answer was '" + result
-                + "'.\nLet's try again, " + Cli.yourName + "!\n");
+                + "'.\nLet's try again, " + cli.getYouName() + "!\n");
     }
 
     public void takeResult(int a, int b, int c) {

@@ -180,9 +180,7 @@
         <module name="FinalClass"/>
         <!-- <module name="HideUtilityClassConstructor"/> -->
         <module name="InterfaceIsType"/>
-        <module name="VisibilityModifier">
-           <property name="publicMemberPattern" value="^$"/>
-        </module>
+        <module name="VisibilityModifier"/>
 
         <!-- Miscellaneous other checks.                   -->
         <!-- See https://checkstyle.org/config_misc.html -->

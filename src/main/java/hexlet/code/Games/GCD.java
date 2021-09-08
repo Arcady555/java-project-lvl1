@@ -8,11 +8,11 @@ import java.util.Random;
 import java.util.Scanner;
 
 public final class GCD implements Engine {
+    private Cli cli = new Cli();
     private int answer = 0;
     private int result = 0;
     public void game() {
         System.out.println("Find the greatest common divisor of given numbers.");
-        //char[] operands = {'-', '+', '*'};
         for (int i = 0; i < NUMBER_OF_LOOPS; i++) {
             Random ran = new Random();
             int numberOnConsole1 = ran.nextInt(NUMBER_LIMITATION);
@@ -29,15 +29,15 @@ public final class GCD implements Engine {
                 return;
             }
         }
-        System.out.println("Congratulations, " + Cli.yourName + "!");
+        System.out.println("Congratulations, " + cli.getYouName() + "!");
     }
 
     public void wrong() {
         System.out.print("'" + answer + "'" + " is wrong answer ;(. Correct answer was '" + result
-                + "'.\nLet's try again, " + Cli.yourName + "!\n");
+                + "'.\nLet's try again, " + cli.getYouName() + "!\n");
     }
 
-    private int takeResult(int a, int b) {
+    public int takeResult(int a, int b) {
         int result1 = 0;
         if (a == b) {
             result1 = a;
