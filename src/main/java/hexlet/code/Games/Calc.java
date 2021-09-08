@@ -20,7 +20,7 @@ public final class Calc implements Engine {
             char operand = chooseOp();
             int numberOnConsole2 = ran.nextInt(NUMBER_LIMITATION);
             result = takeResult(operand, numberOnConsole1, numberOnConsole2);
-            System.out.println("Question: " + numberOnConsole1 + operand + numberOnConsole2);
+            System.out.println("Question: " + numberOnConsole1 + " " + operand + " " + numberOnConsole2);
             System.out.println("Your answer:");
             Scanner scanner = new Scanner(System.in);
             answer = scanner.nextInt();
