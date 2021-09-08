@@ -47,15 +47,12 @@ public final class Calc implements Engine {
 
     private int takeResult(char operand, int a, int b) {
         switch (operand) {
-            case ('-'): {
+            case ('-'):
                 return a - b;
-            }
-            case ('+'): {
+            case ('+'):
                 return a + b;
-            }
-            default: {
+            default:
                 return a * b;
-            }
         }
     }
 }

@@ -49,9 +49,8 @@ public class App {
                 prime.game();
                 break;
 
-            default: {
+            default:
                 System.out.println("wrong number :((");
-            }
         }
     }
 }
