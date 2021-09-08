@@ -13,7 +13,7 @@ public class App {
     public static void main(String[] args) {
         System.out.println(
                 "Please enter the game number and press Enter.\n1 - Greet\n2 "
-                        + "- Even\n3 - Calc\n4 - GCD\n5 - GCD\n6 - GCD\n0- Exit\nYour choice:");
+                        + "- Even\n3 - Calc\n4 - GCD\n5 - Progression\n6 - Prime\n0 - Exit\nYour choice:");
         Even even = new Even();
         Calc calc = new Calc();
         GCD gcd = new GCD();
